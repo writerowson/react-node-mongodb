@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [users, setusers] = useState([])
@@ -34,12 +35,13 @@ const Home = () => {
             <ul>
                 {
                     users.map(user => <li key={user._id}>{user.name}:: {user.email}
+                        <Link to={`/update/${user._id}`}> <button>Update</button> </Link>
                         {/* here we need parameter to specifically delete the element */}
-                        <button onClick={() => hadleUserDelete(user._id)}>X</button></li>)
+                        < button onClick={() => hadleUserDelete(user._id)}>X</button></li>)
                 }
 
-            </ul>
-        </div>
+            </ul >
+        </div >
     );
 };
 
