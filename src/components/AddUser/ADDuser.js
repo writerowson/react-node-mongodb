@@ -30,7 +30,7 @@ const ADDuser = () => {
             <form onSubmit={handleAdduser}>
                 <input type="name" name='name' placeholder='Name' required /><br />
                 <input type="email" name='email' placeholder='Email' required /><br />
-                <input type="submit" value="submit" />
+                <input type="submit" value="Add user" />
 
             </form>
         </div>
